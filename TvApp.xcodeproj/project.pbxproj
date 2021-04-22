@@ -11,7 +11,34 @@
 		A9B5E4B7263202B7003CF7CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4B6263202B7003CF7CD /* ContentView.swift */; };
 		A9B5E4B9263202B8003CF7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B5E4B8263202B8003CF7CD /* Assets.xcassets */; };
 		A9B5E4BC263202B8003CF7CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B5E4BB263202B8003CF7CD /* Preview Assets.xcassets */; };
+		A9B5E4E52632038A003CF7CD /* TvAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B5E4E32632038A003CF7CD /* TvAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9B5E4E82632038A003CF7CD /* TvAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */; };
+		A9B5E4E92632038A003CF7CD /* TvAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9B5E4E62632038A003CF7CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9B5E4A9263202B7003CF7CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9B5E4E02632038A003CF7CD;
+			remoteInfo = TvAppKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9B5E4EA2632038A003CF7CD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9B5E4E92632038A003CF7CD /* TvAppKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A9B5E4B1263202B7003CF7CD /* TvApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +47,21 @@
 		A9B5E4B8263202B8003CF7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9B5E4BB263202B8003CF7CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9B5E4BD263202B8003CF7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9B5E4E12632038A003CF7CD /* TvAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B5E4E32632038A003CF7CD /* TvAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvAppKit.h; sourceTree = "<group>"; };
+		A9B5E4E42632038A003CF7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A9B5E4AE263202B7003CF7CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9B5E4E82632038A003CF7CD /* TvAppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B5E4DE2632038A003CF7CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B5E4B3263202B7003CF7CD /* TvApp */,
+				A9B5E4E22632038A003CF7CD /* TvAppKit */,
 				A9B5E4B2263202B7003CF7CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B5E4B1263202B7003CF7CD /* TvApp.app */,
+				A9B5E4E12632038A003CF7CD /* TvAppKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,7 +109,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A9B5E4E22632038A003CF7CD /* TvAppKit */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5E4E32632038A003CF7CD /* TvAppKit.h */,
+				A9B5E4E42632038A003CF7CD /* Info.plist */,
+			);
+			path = TvAppKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A9B5E4DC2632038A003CF7CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9B5E4E52632038A003CF7CD /* TvAppKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A9B5E4B0263202B7003CF7CD /* TvApp */ = {
@@ -79,15 +139,35 @@
 				A9B5E4AD263202B7003CF7CD /* Sources */,
 				A9B5E4AE263202B7003CF7CD /* Frameworks */,
 				A9B5E4AF263202B7003CF7CD /* Resources */,
+				A9B5E4EA2632038A003CF7CD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9B5E4E72632038A003CF7CD /* PBXTargetDependency */,
 			);
 			name = TvApp;
 			productName = TvApp;
 			productReference = A9B5E4B1263202B7003CF7CD /* TvApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A9B5E4E02632038A003CF7CD /* TvAppKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9B5E4ED2632038A003CF7CD /* Build configuration list for PBXNativeTarget "TvAppKit" */;
+			buildPhases = (
+				A9B5E4DC2632038A003CF7CD /* Headers */,
+				A9B5E4DD2632038A003CF7CD /* Sources */,
+				A9B5E4DE2632038A003CF7CD /* Frameworks */,
+				A9B5E4DF2632038A003CF7CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TvAppKit;
+			productName = TvAppKit;
+			productReference = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +179,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					A9B5E4B0263202B7003CF7CD = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					A9B5E4E02632038A003CF7CD = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -117,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				A9B5E4B0263202B7003CF7CD /* TvApp */,
+				A9B5E4E02632038A003CF7CD /* TvAppKit */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +212,13 @@
 			files = (
 				A9B5E4BC263202B8003CF7CD /* Preview Assets.xcassets in Resources */,
 				A9B5E4B9263202B8003CF7CD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9B5E4DF2632038A003CF7CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +234,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9B5E4DD2632038A003CF7CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9B5E4E72632038A003CF7CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9B5E4E02632038A003CF7CD /* TvAppKit */;
+			targetProxy = A9B5E4E62632038A003CF7CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A9B5E4BE263202B8003CF7CD /* Debug */ = {
@@ -306,6 +412,60 @@
 			};
 			name = Release;
 		};
+		A9B5E4EB2632038A003CF7CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PMEDFW438U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TvAppKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.TvAppKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9B5E4EC2632038A003CF7CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PMEDFW438U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TvAppKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.TvAppKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +483,15 @@
 			buildConfigurations = (
 				A9B5E4C1263202B8003CF7CD /* Debug */,
 				A9B5E4C2263202B8003CF7CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9B5E4ED2632038A003CF7CD /* Build configuration list for PBXNativeTarget "TvAppKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9B5E4EB2632038A003CF7CD /* Debug */,
+				A9B5E4EC2632038A003CF7CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
