@@ -14,6 +14,12 @@
 		A9B5E4E52632038A003CF7CD /* TvAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B5E4E32632038A003CF7CD /* TvAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9B5E4E82632038A003CF7CD /* TvAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */; };
 		A9B5E4E92632038A003CF7CD /* TvAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9B5E4F926320AF1003CF7CD /* MovieListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4F826320AF1003CF7CD /* MovieListItem.swift */; };
+		A9B5E4FC26320CB0003CF7CD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4FB26320CB0003CF7CD /* Movie.swift */; };
+		A9B5E4FF26320CB6003CF7CD /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4FE26320CB6003CF7CD /* MovieList.swift */; };
+		A9B5E50326320DDA003CF7CD /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E50226320DDA003CF7CD /* MovieService.swift */; };
+		A9B5E50D26320FEA003CF7CD /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E50C26320FEA003CF7CD /* MovieResult.swift */; };
+		A9B5E51126321011003CF7CD /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E51026321011003CF7CD /* FavoriteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,12 @@
 		A9B5E4E12632038A003CF7CD /* TvAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B5E4E32632038A003CF7CD /* TvAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvAppKit.h; sourceTree = "<group>"; };
 		A9B5E4E42632038A003CF7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9B5E4F826320AF1003CF7CD /* MovieListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItem.swift; sourceTree = "<group>"; };
+		A9B5E4FB26320CB0003CF7CD /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A9B5E4FE26320CB6003CF7CD /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		A9B5E50226320DDA003CF7CD /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		A9B5E50C26320FEA003CF7CD /* MovieResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResult.swift; sourceTree = "<group>"; };
+		A9B5E51026321011003CF7CD /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +124,24 @@
 		A9B5E4E22632038A003CF7CD /* TvAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				A9B5E4EF263203E6003CF7CD /* Movies */,
 				A9B5E4E32632038A003CF7CD /* TvAppKit.h */,
 				A9B5E4E42632038A003CF7CD /* Info.plist */,
 			);
 			path = TvAppKit;
+			sourceTree = "<group>";
+		};
+		A9B5E4EF263203E6003CF7CD /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5E4FB26320CB0003CF7CD /* Movie.swift */,
+				A9B5E4FE26320CB6003CF7CD /* MovieList.swift */,
+				A9B5E4F826320AF1003CF7CD /* MovieListItem.swift */,
+				A9B5E50226320DDA003CF7CD /* MovieService.swift */,
+				A9B5E50C26320FEA003CF7CD /* MovieResult.swift */,
+				A9B5E51026321011003CF7CD /* FavoriteService.swift */,
+			);
+			path = Movies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +209,7 @@
 					};
 					A9B5E4E02632038A003CF7CD = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -238,6 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B5E51126321011003CF7CD /* FavoriteService.swift in Sources */,
+				A9B5E4FF26320CB6003CF7CD /* MovieList.swift in Sources */,
+				A9B5E50D26320FEA003CF7CD /* MovieResult.swift in Sources */,
+				A9B5E4FC26320CB0003CF7CD /* Movie.swift in Sources */,
+				A9B5E50326320DDA003CF7CD /* MovieService.swift in Sources */,
+				A9B5E4F926320AF1003CF7CD /* MovieListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +404,7 @@
 		A9B5E4C1263202B8003CF7CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -393,6 +427,7 @@
 		A9B5E4C2263202B8003CF7CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -415,6 +450,7 @@
 		A9B5E4EB2632038A003CF7CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -432,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.TvAppKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -442,6 +479,7 @@
 		A9B5E4EC2632038A003CF7CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
