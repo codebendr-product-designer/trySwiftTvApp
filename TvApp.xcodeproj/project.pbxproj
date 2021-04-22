@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		A9B5E50326320DDA003CF7CD /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E50226320DDA003CF7CD /* MovieService.swift */; };
 		A9B5E50D26320FEA003CF7CD /* MovieResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E50C26320FEA003CF7CD /* MovieResult.swift */; };
 		A9B5E51126321011003CF7CD /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E51026321011003CF7CD /* FavoriteService.swift */; };
+		A9B5E5222632119F003CF7CD /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9B5E5212632119F003CF7CD /* SwiftKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B5E5222632119F003CF7CD /* SwiftKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,12 +136,12 @@
 		A9B5E4EF263203E6003CF7CD /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				A9B5E51026321011003CF7CD /* FavoriteService.swift */,
 				A9B5E4FB26320CB0003CF7CD /* Movie.swift */,
 				A9B5E4FE26320CB6003CF7CD /* MovieList.swift */,
 				A9B5E4F826320AF1003CF7CD /* MovieListItem.swift */,
-				A9B5E50226320DDA003CF7CD /* MovieService.swift */,
 				A9B5E50C26320FEA003CF7CD /* MovieResult.swift */,
-				A9B5E51026321011003CF7CD /* FavoriteService.swift */,
+				A9B5E50226320DDA003CF7CD /* MovieService.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -191,6 +193,9 @@
 			dependencies = (
 			);
 			name = TvAppKit;
+			packageProductDependencies = (
+				A9B5E5212632119F003CF7CD /* SwiftKit */,
+			);
 			productName = TvAppKit;
 			productReference = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -203,6 +208,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Daniel Saidi";
 				TargetAttributes = {
 					A9B5E4B0263202B7003CF7CD = {
 						CreatedOnToolsVersion = 12.4;
@@ -222,6 +228,9 @@
 				Base,
 			);
 			mainGroup = A9B5E4A8263202B7003CF7CD;
+			packageReferences = (
+				A9B5E5202632119F003CF7CD /* XCRemoteSwiftPackageReference "SwiftKit" */,
+			);
 			productRefGroup = A9B5E4B2263202B7003CF7CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -535,6 +544,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9B5E5202632119F003CF7CD /* XCRemoteSwiftPackageReference "SwiftKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielsaidi/SwiftKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9B5E5212632119F003CF7CD /* SwiftKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9B5E5202632119F003CF7CD /* XCRemoteSwiftPackageReference "SwiftKit" */;
+			productName = SwiftKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9B5E4A9263202B7003CF7CD /* Project object */;
 }
