@@ -10,17 +10,17 @@ import SwiftKit
 
 public enum MovieApiRoute: ApiRoute {
     
-    case movie(id: String)
-    case moviesBySearch(query: String, page: Int)
-    case moviesByYear(Int, page: Int)
+    case movie(id: String, env: MovieApiEnvironment)
+    case moviesBySearch(query: String, page: Int, env: MovieApiEnvironment)
+    case moviesByYear(Int, page: Int, env: MovieApiEnvironment)
     
     public var path: String { "" }
     
     public var queryParams: [String : String] {
         switch self {
-        case .movie(let id): return ["i": id, "type": "movie", "plot": "full"]
-        case .moviesBySearch(let query, let page): return ["s": query, "type": "movie", "page": "\(page)"]
-        case .moviesByYear(let year, let page): return ["y": "\(year)", "type": "movie", "page": "\(page)"]
+        case .movie(let id, let env): return ["i": id, "type": "movie", "plot": "full", "apikey": env.apiKey]
+        case .moviesBySearch(let query, let page, let env): return ["s": query, "type": "movie", "page": "\(page)", "apikey": env.apiKey]
+        case .moviesByYear(let year, let page, let env): return ["y": "\(year)", "type": "movie", "page": "\(page)", "apikey": env.apiKey]
         }
     }
 }

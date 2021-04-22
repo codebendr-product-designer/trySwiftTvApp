@@ -10,11 +10,13 @@ import SwiftKit
 
 public struct MovieApiEnvironment: ApiEnvironment {
     
-    public init() {
+    public init(apiKey: String) {
         let urlString = "http://www.omdbapi.com"
         guard let url = URL(string: urlString) else { fatalError("Invalid URL") }
+        self.apiKey = apiKey
         self.url = url
     }
     
+    public let apiKey: String
     public let url: URL
 }

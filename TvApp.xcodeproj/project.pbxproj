@@ -26,6 +26,7 @@
 		A9B5E52E263214B3003CF7CD /* ApiMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E52C263214B3003CF7CD /* ApiMovie.swift */; };
 		A9B5E52F263214B3003CF7CD /* ApiMovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E52D263214B3003CF7CD /* ApiMovieList.swift */; };
 		A9B5E532263216EA003CF7CD /* ApiMovieListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E531263216EA003CF7CD /* ApiMovieListItem.swift */; };
+		A9B5E53626321919003CF7CD /* ApiMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E53526321919003CF7CD /* ApiMovieService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		A9B5E52C263214B3003CF7CD /* ApiMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiMovie.swift; sourceTree = "<group>"; };
 		A9B5E52D263214B3003CF7CD /* ApiMovieList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiMovieList.swift; sourceTree = "<group>"; };
 		A9B5E531263216EA003CF7CD /* ApiMovieListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMovieListItem.swift; sourceTree = "<group>"; };
+		A9B5E53526321919003CF7CD /* ApiMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMovieService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				A9B5E531263216EA003CF7CD /* ApiMovieListItem.swift */,
 				A9B5E5252632122F003CF7CD /* MovieApiEnvironment.swift */,
 				A9B5E529263212CE003CF7CD /* MovieApiRoute.swift */,
+				A9B5E53526321919003CF7CD /* ApiMovieService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				A9B5E51126321011003CF7CD /* FavoriteService.swift in Sources */,
 				A9B5E52E263214B3003CF7CD /* ApiMovie.swift in Sources */,
 				A9B5E4FF26320CB6003CF7CD /* MovieList.swift in Sources */,
+				A9B5E53626321919003CF7CD /* ApiMovieService.swift in Sources */,
 				A9B5E532263216EA003CF7CD /* ApiMovieListItem.swift in Sources */,
 				A9B5E50D26320FEA003CF7CD /* MovieResult.swift in Sources */,
 				A9B5E4FC26320CB0003CF7CD /* Movie.swift in Sources */,
