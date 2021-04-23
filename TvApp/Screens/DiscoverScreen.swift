@@ -7,8 +7,16 @@
 //
 
 import SwiftUI
+import TvAppKit
 
 struct DiscoverScreen: View {
+    
+    init(movieService: MovieService = IoC.movieService) {
+        self.movieService = movieService
+    }
+    
+    private let movieService: MovieService
+    
     var body: some View {
         Text("Discover")
     }

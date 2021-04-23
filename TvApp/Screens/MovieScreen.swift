@@ -11,7 +11,15 @@ import TvAppKit
 
 struct MovieScreen: View {
     
-    let movie: Movie
+    init(
+        movie: Movie,
+        movieService: MovieService = IoC.movieService) {
+        self.movie = movie
+        self.movieService = movieService
+    }
+    
+    private let movie: Movie
+    private let movieService: MovieService
     
     var body: some View {
         Text(movie.title)

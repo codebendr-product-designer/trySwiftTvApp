@@ -31,6 +31,7 @@
 		A9B5E5CF263316C9003CF7CD /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5CE263316C9003CF7CD /* FavoritesScreen.swift */; };
 		A9B5E5D2263316D8003CF7CD /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */; };
 		A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */; };
+		A9B5E5DD26331CE3003CF7CD /* IoC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5DC26331CE3003CF7CD /* IoC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A9B5E5CE263316C9003CF7CD /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
 		A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScreen.swift; sourceTree = "<group>"; };
+		A9B5E5DC26331CE3003CF7CD /* IoC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			children = (
 				A9B5E4B4263202B7003CF7CD /* TvApp.swift */,
 				A9B5E4B6263202B7003CF7CD /* AppTabs.swift */,
+				A9B5E5DC26331CE3003CF7CD /* IoC.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B5E5DD26331CE3003CF7CD /* IoC.swift in Sources */,
 				A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */,
 				A9B5E4B7263202B7003CF7CD /* AppTabs.swift in Sources */,
 				A9B5E5D2263316D8003CF7CD /* SearchScreen.swift in Sources */,
