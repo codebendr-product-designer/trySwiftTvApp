@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A9B5E4B5263202B7003CF7CD /* TvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4B4263202B7003CF7CD /* TvApp.swift */; };
-		A9B5E4B7263202B7003CF7CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4B6263202B7003CF7CD /* ContentView.swift */; };
+		A9B5E4B7263202B7003CF7CD /* AppTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4B6263202B7003CF7CD /* AppTabs.swift */; };
 		A9B5E4B9263202B8003CF7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B5E4B8263202B8003CF7CD /* Assets.xcassets */; };
 		A9B5E4BC263202B8003CF7CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9B5E4BB263202B8003CF7CD /* Preview Assets.xcassets */; };
 		A9B5E4E52632038A003CF7CD /* TvAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B5E4E32632038A003CF7CD /* TvAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,7 +56,7 @@
 /* Begin PBXFileReference section */
 		A9B5E4B1263202B7003CF7CD /* TvApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B5E4B4263202B7003CF7CD /* TvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvApp.swift; sourceTree = "<group>"; };
-		A9B5E4B6263202B7003CF7CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A9B5E4B6263202B7003CF7CD /* AppTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabs.swift; sourceTree = "<group>"; };
 		A9B5E4B8263202B8003CF7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9B5E4BB263202B8003CF7CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9B5E4BD263202B8003CF7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,8 +118,7 @@
 		A9B5E4B3263202B7003CF7CD /* TvApp */ = {
 			isa = PBXGroup;
 			children = (
-				A9B5E4B4263202B7003CF7CD /* TvApp.swift */,
-				A9B5E4B6263202B7003CF7CD /* ContentView.swift */,
+				A9B5E5C726330E18003CF7CD /* App */,
 				A9B5E4B8263202B8003CF7CD /* Assets.xcassets */,
 				A9B5E4BD263202B8003CF7CD /* Info.plist */,
 				A9B5E4BA263202B8003CF7CD /* Preview Content */,
@@ -170,6 +169,15 @@
 				A9B5E529263212CE003CF7CD /* MovieApiRoute.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		A9B5E5C726330E18003CF7CD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5E4B4263202B7003CF7CD /* TvApp.swift */,
+				A9B5E4B6263202B7003CF7CD /* AppTabs.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9B5E4B7263202B7003CF7CD /* ContentView.swift in Sources */,
+				A9B5E4B7263202B7003CF7CD /* AppTabs.swift in Sources */,
 				A9B5E4B5263202B7003CF7CD /* TvApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import TvAppKit
 
 @main
 struct TvApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppTabs()
         }
     }
 }
