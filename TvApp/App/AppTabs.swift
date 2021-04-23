@@ -19,15 +19,15 @@ struct AppTabs: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                Text("Discover").tabItem {
+                DiscoverScreen().tabItem {
                     Text("Discover")
                 }.tag(Tab.discover)
                 
-                Text("Favorites").tabItem {
+                FavoritesScreen().tabItem {
                     Text("Favorites")
                 }.tag(Tab.favorites)
                 
-                Text("Search").tabItem {
+                SearchScreen().tabItem {
                     Text("Search")
                 }.tag(Tab.search)
             }

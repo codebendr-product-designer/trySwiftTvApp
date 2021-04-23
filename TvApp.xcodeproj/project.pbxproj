@@ -27,6 +27,10 @@
 		A9B5E52F263214B3003CF7CD /* ApiMovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E52D263214B3003CF7CD /* ApiMovieList.swift */; };
 		A9B5E532263216EA003CF7CD /* ApiMovieListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E531263216EA003CF7CD /* ApiMovieListItem.swift */; };
 		A9B5E53626321919003CF7CD /* ApiMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E53526321919003CF7CD /* ApiMovieService.swift */; };
+		A9B5E5CC263316BF003CF7CD /* DiscoverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5CB263316BF003CF7CD /* DiscoverScreen.swift */; };
+		A9B5E5CF263316C9003CF7CD /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5CE263316C9003CF7CD /* FavoritesScreen.swift */; };
+		A9B5E5D2263316D8003CF7CD /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */; };
+		A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		A9B5E52D263214B3003CF7CD /* ApiMovieList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiMovieList.swift; sourceTree = "<group>"; };
 		A9B5E531263216EA003CF7CD /* ApiMovieListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMovieListItem.swift; sourceTree = "<group>"; };
 		A9B5E53526321919003CF7CD /* ApiMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMovieService.swift; sourceTree = "<group>"; };
+		A9B5E5CB263316BF003CF7CD /* DiscoverScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverScreen.swift; sourceTree = "<group>"; };
+		A9B5E5CE263316C9003CF7CD /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
+		A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B5E5C726330E18003CF7CD /* App */,
+				A9B5E5CA263316B0003CF7CD /* Screens */,
 				A9B5E4B8263202B8003CF7CD /* Assets.xcassets */,
 				A9B5E4BD263202B8003CF7CD /* Info.plist */,
 				A9B5E4BA263202B8003CF7CD /* Preview Content */,
@@ -178,6 +187,17 @@
 				A9B5E4B6263202B7003CF7CD /* AppTabs.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		A9B5E5CA263316B0003CF7CD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5E5CB263316BF003CF7CD /* DiscoverScreen.swift */,
+				A9B5E5CE263316C9003CF7CD /* FavoritesScreen.swift */,
+				A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */,
+				A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */,
 				A9B5E4B7263202B7003CF7CD /* AppTabs.swift in Sources */,
+				A9B5E5D2263316D8003CF7CD /* SearchScreen.swift in Sources */,
+				A9B5E5CC263316BF003CF7CD /* DiscoverScreen.swift in Sources */,
 				A9B5E4B5263202B7003CF7CD /* TvApp.swift in Sources */,
+				A9B5E5CF263316C9003CF7CD /* FavoritesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
