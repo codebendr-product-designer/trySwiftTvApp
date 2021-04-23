@@ -8,15 +8,19 @@
 
 import SwiftKit
 
-public struct MovieApiEnvironment: ApiEnvironment {
+public enum MovieApiEnvironment: ApiEnvironment {
     
-    public init(apiKey: String) {
-        let urlString = "http://www.omdbapi.com"
-        guard let url = URL(string: urlString) else { fatalError("Invalid URL") }
-        self.apiKey = apiKey
-        self.url = url
+    case production(apiKey: String)
+    
+    public var apiKey: String {
+        switch self {
+        case .production(let apiKey): return apiKey
+        }
     }
     
-    public let apiKey: String
-    public let url: URL
+    public var url: URL {
+        switch self {
+        case .production: return URL(string: "http://www.omdbapi.com")!
+        }
+    }
 }
