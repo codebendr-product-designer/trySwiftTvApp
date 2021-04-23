@@ -14,3 +14,18 @@ public struct MovieList: Identifiable {
     public let title: String
     public let movies: [Movie]
 }
+
+public extension MovieList {
+    
+    static var preview: MovieList {
+        let id = UUID()
+        return MovieList(id: id, title: id.uuidString, movies: [
+            .preview,
+            .preview,
+            .preview,
+            .preview,
+            .preview,
+            .preview
+        ])
+    }
+}

@@ -32,6 +32,7 @@
 		A9B5E5D2263316D8003CF7CD /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */; };
 		A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */; };
 		A9B5E5DD26331CE3003CF7CD /* IoC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5DC26331CE3003CF7CD /* IoC.swift */; };
+		A9B5E5E126331F9B003CF7CD /* MovieShelves.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieScreen.swift; sourceTree = "<group>"; };
 		A9B5E5DC26331CE3003CF7CD /* IoC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoC.swift; sourceTree = "<group>"; };
+		A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieShelves.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				A9B5E5C726330E18003CF7CD /* App */,
-				A9B5E5CA263316B0003CF7CD /* Screens */,
 				A9B5E4B8263202B8003CF7CD /* Assets.xcassets */,
 				A9B5E4BD263202B8003CF7CD /* Info.plist */,
 				A9B5E4BA263202B8003CF7CD /* Preview Content */,
+				A9B5E5CA263316B0003CF7CD /* Screens */,
+				A9B5E5DF26331F8F003CF7CD /* Views */,
 			);
 			path = TvApp;
 			sourceTree = "<group>";
@@ -201,6 +204,14 @@
 				A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		A9B5E5DF26331F8F003CF7CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 				A9B5E5CC263316BF003CF7CD /* DiscoverScreen.swift in Sources */,
 				A9B5E4B5263202B7003CF7CD /* TvApp.swift in Sources */,
 				A9B5E5CF263316C9003CF7CD /* FavoritesScreen.swift in Sources */,
+				A9B5E5E126331F9B003CF7CD /* MovieShelves.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

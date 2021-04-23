@@ -17,8 +17,37 @@ struct DiscoverScreen: View {
     
     private let movieService: MovieService
     
+    @State private var year = 0
+    @State private var lists = [MovieList]()
+    
     var body: some View {
-        Text("Discover")
+        ScrollView(.vertical) {
+            MovieShelves(lists: lists)
+            Button("Next year", action: loadNextYear)
+        }.onAppear(perform: loadFirstYear)
+    }
+}
+
+private extension DiscoverScreen {
+    
+    func loadFirstYear() {
+        year = 2021
+        lists = []
+        loadYear()
+    }
+    
+    func loadNextYear() {
+        year -= 1
+        loadYear()
+    }
+    
+    func loadYear() {
+        movieService.getMovies(year: year, page: 1) {
+            switch $0 {
+            case .failure: break // Handle error
+            case .success(let list): self.lists.append(list)
+            }
+        }
     }
 }
 
