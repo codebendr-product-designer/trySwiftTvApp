@@ -30,6 +30,7 @@ struct MovieScreen: View {
     private var movie: Movie { context.movie }
     private let movieService: MovieService
     
+    @State private var isPlaying = false
     @StateObject private var context: ScreenContext
     
     var body: some View {
@@ -41,6 +42,9 @@ struct MovieScreen: View {
             buttonSection
         }
         .background(background)
+        .fullScreenCover(isPresented: $isPlaying, content: {
+            MoviePlayer(movie: movie).edgesIgnoringSafeArea(.all)
+        })
         .onAppear(perform: fetchMovie)
     }
 }
@@ -59,7 +63,9 @@ private extension MovieScreen {
     
     func toggleFavorite() {}
     
-    func watchMovie() {}
+    func watchMovie() {
+        isPlaying = true
+    }
 }
 
 private extension MovieScreen {

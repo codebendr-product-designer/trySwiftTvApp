@@ -37,6 +37,7 @@
 		A9B5E5F82634557E003CF7CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A9B5E5F72634557E003CF7CD /* Kingfisher */; };
 		A9B5E5FB2634594C003CF7CD /* MovieCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5FA2634594C003CF7CD /* MovieCover.swift */; };
 		A9B5E5FF26345994003CF7CD /* MovieNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5FE26345994003CF7CD /* MovieNavigationButton.swift */; };
+		A9B5E60B263472AC003CF7CD /* MoviePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E60A263472AC003CF7CD /* MoviePlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		A9B5E5EF2633EDB1003CF7CD /* MovieGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGrid.swift; sourceTree = "<group>"; };
 		A9B5E5FA2634594C003CF7CD /* MovieCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCover.swift; sourceTree = "<group>"; };
 		A9B5E5FE26345994003CF7CD /* MovieNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNavigationButton.swift; sourceTree = "<group>"; };
+		A9B5E60A263472AC003CF7CD /* MoviePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				A9B5E5CB263316BF003CF7CD /* DiscoverScreen.swift */,
 				A9B5E5CE263316C9003CF7CD /* FavoritesScreen.swift */,
 				A9B5E5D4263316E9003CF7CD /* MovieScreen.swift */,
+				A9B5E60A263472AC003CF7CD /* MoviePlayer.swift */,
 				A9B5E5D1263316D8003CF7CD /* SearchScreen.swift */,
 			);
 			path = Screens;
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9B5E5DD26331CE3003CF7CD /* IoC.swift in Sources */,
+				A9B5E60B263472AC003CF7CD /* MoviePlayer.swift in Sources */,
 				A9B5E5FB2634594C003CF7CD /* MovieCover.swift in Sources */,
 				A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */,
 				A9B5E4B7263202B7003CF7CD /* AppTabs.swift in Sources */,
