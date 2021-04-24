@@ -22,7 +22,34 @@ struct MovieScreen: View {
     private let movieService: MovieService
     
     var body: some View {
-        Text(movie.title)
+        VStack(alignment: .leading) {
+            Spacer()
+            MovieCover(movie: movie)
+                .aspectRatio(contentMode: .fit)
+                .frame(maxHeight: 500)
+            HStack {
+                Text(movie.title).font(.title)
+                Spacer()
+            }
+            HStack(spacing: 30) {
+                Text(movie.year)
+                Text(movie.runtime)
+                Text(movie.rated)
+                    .fixedSize(horizontal: true, vertical: false)
+                    .padding(.vertical, 5)
+                    .padding(.horizontal, 10)
+                    .border(Color.white, width: 3)
+                    .cornerRadius(5)
+            }
+            .padding(.bottom, 40)
+            .font(.caption)
+            
+            Text(movie.plot)
+        }.background(
+            MovieCover(movie: movie)
+                .edgesIgnoringSafeArea(.all)
+                .opacity(0.2)
+        )
     }
 }
 
