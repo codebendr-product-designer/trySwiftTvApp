@@ -17,7 +17,7 @@ struct MovieNavigationButton: View {
     
     var body: some View {
         NavigationLink(destination: MovieScreen(movie: movie)) {
-            MovieListItem(movie: movie)
+            MovieCover(movie: movie)
                 .frame(width: 250, height: 370)
         }.buttonStyle(CardButtonStyle())
     }
