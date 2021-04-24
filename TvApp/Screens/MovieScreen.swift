@@ -35,12 +35,58 @@ struct MovieScreen: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Spacer()
-            MovieCover(movie: movie)
-                .aspectRatio(contentMode: .fit)
-                .frame(maxHeight: 500)
-                .cornerRadius(20)
-                .shadow(radius: 10)
-            
+            cover
+            titleSection
+            detailsSection
+            buttonSection
+        }
+        .background(background)
+        .onAppear(perform: fetchMovie)
+    }
+}
+
+private extension MovieScreen {
+    
+    func fetchMovie() {
+        context.movie = movie
+        movieService.getMovie(id: movie.id) {
+            switch $0 {
+            case .failure: break // Handle error
+            case .success(let movie): context.movie = movie
+            }
+        }
+    }
+    
+    func toggleFavorite() {}
+    
+    func watchMovie() {}
+}
+
+private extension MovieScreen {
+    
+    var background: some View {
+        MovieCover(movie: movie)
+            .edgesIgnoringSafeArea(.all)
+            .opacity(0.2)
+    }
+    
+    var buttonSection: some View {
+        HStack {
+            Button("Favorite", action: toggleFavorite)
+            Button("Watch", action: watchMovie)
+        }.padding(.top)
+    }
+    
+    var cover: some View {
+        MovieCover(movie: movie)
+            .aspectRatio(contentMode: .fit)
+            .frame(maxHeight: 500)
+            .cornerRadius(20)
+            .shadow(radius: 10)
+    }
+    
+    var titleSection: some View {
+        Group {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
                     Text(movie.title).font(.title)
@@ -59,7 +105,11 @@ struct MovieScreen: View {
                 .padding(.bottom, 30)
                 .font(.caption)
             }
-            
+        }
+    }
+    
+    var detailsSection: some View {
+        Group {
             Text(movie.plot)
             
             HStack(spacing: 0) {
@@ -70,23 +120,6 @@ struct MovieScreen: View {
             HStack(spacing: 0) {
                 Text("Writers: ").bold()
                 Text(movie.writers.joined(separator: ", "))
-            }
-        }.background(
-            MovieCover(movie: movie)
-                .edgesIgnoringSafeArea(.all)
-                .opacity(0.2)
-        ).onAppear(perform: fetchMovie)
-    }
-}
-
-private extension MovieScreen {
-    
-    func fetchMovie() {
-        context.movie = movie
-        movieService.getMovie(id: movie.id) {
-            switch $0 {
-            case .failure: break // Handle error
-            case .success(let movie): context.movie = movie
             }
         }
     }
