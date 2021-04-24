@@ -15,7 +15,7 @@ struct MovieScreen: View {
         movie: Movie,
         movieService: MovieService = IoC.movieService) {
         self.movieService = movieService
-        _context = StateObject(wrappedValue: ScreenContext(movie: movie))
+        _screenContext = StateObject(wrappedValue: ScreenContext(movie: movie))
     }
     
     class ScreenContext: ObservableObject {
@@ -27,11 +27,12 @@ struct MovieScreen: View {
         @Published var movie: Movie
     }
     
-    private var movie: Movie { context.movie }
+    private var movie: Movie { screenContext.movie }
     private let movieService: MovieService
     
     @State private var isPlaying = false
-    @StateObject private var context: ScreenContext
+    @StateObject private var screenContext: ScreenContext
+    @EnvironmentObject private var favoriteContext: FavoriteMovieContext
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -52,16 +53,18 @@ struct MovieScreen: View {
 private extension MovieScreen {
     
     func fetchMovie() {
-        context.movie = movie
+        screenContext.movie = movie
         movieService.getMovie(id: movie.id) {
             switch $0 {
             case .failure: break // Handle error
-            case .success(let movie): context.movie = movie
+            case .success(let movie): screenContext.movie = movie
             }
         }
     }
     
-    func toggleFavorite() {}
+    func toggleFavorite() {
+        favoriteContext.toggleFavorite(movie)
+    }
     
     func watchMovie() {
         isPlaying = true
@@ -78,7 +81,7 @@ private extension MovieScreen {
     
     var buttonSection: some View {
         HStack {
-            Button("Favorite", action: toggleFavorite)
+            favoriteButton
             Button("Watch", action: watchMovie)
         }.padding(.top)
     }
@@ -89,6 +92,11 @@ private extension MovieScreen {
             .frame(maxHeight: 500)
             .cornerRadius(20)
             .shadow(radius: 10)
+    }
+    
+    var favoriteButton: some View {
+        let text = favoriteContext.isFavorite(movie) ? "Remove favorite" : "Add favorite"
+        return Button(text, action: toggleFavorite)
     }
     
     var titleSection: some View {
@@ -135,5 +143,6 @@ struct MovieScreen_Previews: PreviewProvider {
     
     static var previews: some View {
         MovieScreen(movie: .preview)
+            .environmentObject(FavoriteMovieContext())
     }
 }

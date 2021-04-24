@@ -13,6 +13,7 @@ struct TvApp: App {
     var body: some Scene {
         WindowGroup {
             AppTabs()
+                .environmentObject(FavoriteMovieContext())
         }
     }
 }
