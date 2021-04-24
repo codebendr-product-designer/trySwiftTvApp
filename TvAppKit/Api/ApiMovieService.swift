@@ -36,7 +36,8 @@ public class ApiMovieService: ApiService, MovieService {
             switch $0 {
             case .failure: completion($0)
             case .success(let list):
-                let list = MovieList(id: list.id, title: "\(year)", movies: list.movies)
+                let movies = list.movies.distinct()
+                let list = MovieList(id: list.id, title: "\(year)", movies: movies)
                 completion(.success(list))
             }
         }
@@ -49,7 +50,8 @@ public class ApiMovieService: ApiService, MovieService {
             switch $0 {
             case .failure: completion($0)
             case .success(let list):
-                let list = MovieList(id: list.id, title: query, movies: list.movies)
+                let movies = list.movies.distinct()
+                let list = MovieList(id: list.id, title: query, movies: movies)
                 completion(.success(list))
             }
         }

@@ -20,9 +20,9 @@ struct MovieShelves: View {
                     Text(list.title).font(.headline)
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 20) {
-                            ForEach(list.movies.map { MovieListItem(movie: $0) }) { item in
+                            ForEach(list.movies) { movie in
                                 Button(action: { print("Hello") }) {
-                                    Text(item.movie.title)
+                                    Text(movie.title)
                                 }.padding(40)
                             }
                         }
