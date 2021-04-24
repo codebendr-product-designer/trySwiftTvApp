@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct MovieListItem {
+public struct MovieListItem: Identifiable {
     
     public init(movie: Movie) {
         self.id = UUID()
