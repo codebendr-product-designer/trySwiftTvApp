@@ -14,7 +14,7 @@ struct MovieShelves: View {
     let lists: [MovieList]
     
     var body: some View {
-        LazyVStack(spacing: 100) {
+        LazyVStack(spacing: 40) {
             ForEach(lists) { list in
                 VStack {
                     Text(list.title).font(.headline)

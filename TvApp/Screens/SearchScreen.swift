@@ -8,6 +8,7 @@
 
 import SwiftUI
 import TvAppKit
+import Combine
 
 struct SearchScreen: View {
     
@@ -17,8 +18,31 @@ struct SearchScreen: View {
     
     private let movieService: MovieService
     
+    @State private var text = ""
+    @State private var lastQuery = ""
+    @State private var list = MovieList.empty
+    
     var body: some View {
-        Text("Search")
+        VStack {
+            TextField("Search", text: $text)
+            ScrollView {
+                MovieGrid(list: list)
+            }
+        }.onReceive(text.publisher, perform: { _ in search() })
+    }
+}
+
+private extension SearchScreen {
+    
+    func search() {
+        guard text != lastQuery else { return }
+        lastQuery = text
+        movieService.searchMovies(query: text, page: 1) {
+            switch $0 {
+            case .failure: break // Handle
+            case .success(let list): self.list = list
+            }
+        }
     }
 }
 

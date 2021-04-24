@@ -44,6 +44,7 @@ public class ApiMovieService: ApiService, MovieService {
     }
     
     public func searchMovies(query: String, page: Int, completion: @escaping (MovieResult<MovieList>) -> Void) {
+        let query = query.trimmingCharacters(in: .whitespaces)
         let route = MovieApiRoute.moviesBySearch(query: query, page: page, env: movieEnvironment)
         let request = route.request(for: environment)
         performTask(with: request, type: ApiMovieList.self) {
