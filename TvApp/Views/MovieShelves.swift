@@ -22,7 +22,7 @@ struct MovieShelves: View {
                         LazyHStack(spacing: 20) {
                             ForEach(list.movies) { movie in
                                 Button(action: { print("Hello") }) {
-                                    Text(movie.title)
+                                    MovieListItem(movie: movie)
                                 }.padding(40)
                             }
                         }

@@ -14,7 +14,6 @@
 		A9B5E4E52632038A003CF7CD /* TvAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B5E4E32632038A003CF7CD /* TvAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9B5E4E82632038A003CF7CD /* TvAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */; };
 		A9B5E4E92632038A003CF7CD /* TvAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9B5E4E12632038A003CF7CD /* TvAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A9B5E4F926320AF1003CF7CD /* MovieListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4F826320AF1003CF7CD /* MovieListItem.swift */; };
 		A9B5E4FC26320CB0003CF7CD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4FB26320CB0003CF7CD /* Movie.swift */; };
 		A9B5E4FF26320CB6003CF7CD /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E4FE26320CB6003CF7CD /* MovieList.swift */; };
 		A9B5E50326320DDA003CF7CD /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E50226320DDA003CF7CD /* MovieService.swift */; };
@@ -35,6 +34,8 @@
 		A9B5E5E126331F9B003CF7CD /* MovieShelves.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */; };
 		A9B5E5E82633EBDE003CF7CD /* Collection+Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5E72633EBDE003CF7CD /* Collection+Distinct.swift */; };
 		A9B5E5F02633EDB1003CF7CD /* MovieGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5EF2633EDB1003CF7CD /* MovieGrid.swift */; };
+		A9B5E5F42634551D003CF7CD /* MovieListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E5F32634551D003CF7CD /* MovieListItem.swift */; };
+		A9B5E5F82634557E003CF7CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A9B5E5F72634557E003CF7CD /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +72,6 @@
 		A9B5E4E12632038A003CF7CD /* TvAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B5E4E32632038A003CF7CD /* TvAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvAppKit.h; sourceTree = "<group>"; };
 		A9B5E4E42632038A003CF7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9B5E4F826320AF1003CF7CD /* MovieListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItem.swift; sourceTree = "<group>"; };
 		A9B5E4FB26320CB0003CF7CD /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A9B5E4FE26320CB6003CF7CD /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		A9B5E50226320DDA003CF7CD /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
@@ -91,6 +91,7 @@
 		A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieShelves.swift; sourceTree = "<group>"; };
 		A9B5E5E72633EBDE003CF7CD /* Collection+Distinct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Distinct.swift"; sourceTree = "<group>"; };
 		A9B5E5EF2633EDB1003CF7CD /* MovieGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGrid.swift; sourceTree = "<group>"; };
+		A9B5E5F32634551D003CF7CD /* MovieListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B5E5F82634557E003CF7CD /* Kingfisher in Frameworks */,
 				A9B5E4E82632038A003CF7CD /* TvAppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,7 +172,6 @@
 				A9B5E51026321011003CF7CD /* FavoriteService.swift */,
 				A9B5E4FB26320CB0003CF7CD /* Movie.swift */,
 				A9B5E4FE26320CB6003CF7CD /* MovieList.swift */,
-				A9B5E4F826320AF1003CF7CD /* MovieListItem.swift */,
 				A9B5E50C26320FEA003CF7CD /* MovieResult.swift */,
 				A9B5E50226320DDA003CF7CD /* MovieService.swift */,
 			);
@@ -216,6 +217,7 @@
 			children = (
 				A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */,
 				A9B5E5EF2633EDB1003CF7CD /* MovieGrid.swift */,
+				A9B5E5F32634551D003CF7CD /* MovieListItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +259,9 @@
 				A9B5E4E72632038A003CF7CD /* PBXTargetDependency */,
 			);
 			name = TvApp;
+			packageProductDependencies = (
+				A9B5E5F72634557E003CF7CD /* Kingfisher */,
+			);
 			productName = TvApp;
 			productReference = A9B5E4B1263202B7003CF7CD /* TvApp.app */;
 			productType = "com.apple.product-type.application";
@@ -312,6 +317,7 @@
 			mainGroup = A9B5E4A8263202B7003CF7CD;
 			packageReferences = (
 				A9B5E5202632119F003CF7CD /* XCRemoteSwiftPackageReference "SwiftKit" */,
+				A9B5E5F62634557E003CF7CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = A9B5E4B2263202B7003CF7CD /* Products */;
 			projectDirPath = "";
@@ -348,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9B5E5DD26331CE3003CF7CD /* IoC.swift in Sources */,
+				A9B5E5F42634551D003CF7CD /* MovieListItem.swift in Sources */,
 				A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */,
 				A9B5E4B7263202B7003CF7CD /* AppTabs.swift in Sources */,
 				A9B5E5D2263316D8003CF7CD /* SearchScreen.swift in Sources */,
@@ -372,7 +379,6 @@
 				A9B5E50D26320FEA003CF7CD /* MovieResult.swift in Sources */,
 				A9B5E4FC26320CB0003CF7CD /* Movie.swift in Sources */,
 				A9B5E50326320DDA003CF7CD /* MovieService.swift in Sources */,
-				A9B5E4F926320AF1003CF7CD /* MovieListItem.swift in Sources */,
 				A9B5E52F263214B3003CF7CD /* ApiMovieList.swift in Sources */,
 				A9B5E5262632122F003CF7CD /* MovieApiEnvironment.swift in Sources */,
 				A9B5E52A263212CE003CF7CD /* MovieApiRoute.swift in Sources */,
@@ -652,6 +658,14 @@
 				kind = branch;
 			};
 		};
+		A9B5E5F62634557E003CF7CD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -659,6 +673,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9B5E5202632119F003CF7CD /* XCRemoteSwiftPackageReference "SwiftKit" */;
 			productName = SwiftKit;
+		};
+		A9B5E5F72634557E003CF7CD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9B5E5F62634557E003CF7CD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
