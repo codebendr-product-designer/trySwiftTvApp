@@ -19,6 +19,7 @@ struct MovieGrid: View {
         LazyVGrid(columns: columns) {
             ForEach(list.movies) { movie in
                 MovieNavigationButton(movie: movie)
+                    .padding(.vertical)
             }
         }
     }

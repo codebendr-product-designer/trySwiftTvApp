@@ -22,6 +22,11 @@ public extension MovieList {
         return MovieList(id: id, title: id.uuidString, movies: [])
     }
     
+    static func movies(_ movies: [Movie]) -> MovieList {
+        let id = UUID()
+        return MovieList(id: id, title: id.uuidString, movies: movies)
+    }
+    
     static var preview: MovieList {
         let id = UUID()
         return MovieList(id: id, title: id.uuidString, movies: [

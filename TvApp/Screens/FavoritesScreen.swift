@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct FavoritesScreen: View {
+    
+    @EnvironmentObject private var favoriteContext: FavoriteMovieContext
+    
     var body: some View {
-        Text("Favorites")
+        ScrollView(.vertical) {
+            MovieGrid(list: .movies(favoriteContext.favorites))
+        }
     }
 }
 
