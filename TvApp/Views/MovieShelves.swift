@@ -12,23 +12,37 @@ import TvAppKit
 struct MovieShelves: View {
     
     let lists: [MovieList]
+    let paginationAction: () -> Void
     
     var body: some View {
         LazyVStack(spacing: 40) {
             ForEach(lists) { list in
-                VStack {
-                    Text(list.title).font(.headline)
-                    ScrollView(.horizontal) {
-                        LazyHStack(spacing: 20) {
-                            ForEach(list.movies) { movie in
-                                MovieNavigationButton(movie: movie)
-                                    .padding(40)
-                            }
-                        }
+                listView(for: list)
+                    .onAppear { tryPaginate(for: list) }
+            }
+        }
+    }
+}
+
+private extension MovieShelves {
+    
+    func listView(for list: MovieList) -> some View {
+        VStack {
+            Text(list.title).font(.headline)
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 20) {
+                    ForEach(list.movies) { movie in
+                        MovieNavigationButton(movie: movie)
+                            .padding(40)
                     }
                 }
             }
         }
+    }
+    
+    func tryPaginate(for list: MovieList) {
+        guard list.id == lists.last?.id else { return }
+        paginationAction()
     }
 }
 
@@ -41,6 +55,6 @@ struct MovieShelves_Previews: PreviewProvider {
             .preview,
             .preview,
             .preview
-        ])
+        ], paginationAction: {})
     }
 }

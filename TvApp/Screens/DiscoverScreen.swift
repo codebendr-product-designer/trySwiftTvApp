@@ -22,7 +22,7 @@ struct DiscoverScreen: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            MovieShelves(lists: lists)
+            MovieShelves(lists: lists, paginationAction: loadNextYear)
             Button("Next year", action: loadNextYear)
         }
         .edgesIgnoringSafeArea(.horizontal)
