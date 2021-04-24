@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Movie: Identifiable, Hashable {
+public struct Movie: Codable, Identifiable, Hashable {
     
     public init(
         id: String,
