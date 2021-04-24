@@ -21,9 +21,8 @@ struct MovieShelves: View {
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 20) {
                             ForEach(list.movies) { movie in
-                                Button(action: { print("Hello") }) {
-                                    MovieListItem(movie: movie)
-                                }.padding(40)
+                                MovieNavigationButton(movie: movie)
+                                    .padding(40)
                             }
                         }
                     }

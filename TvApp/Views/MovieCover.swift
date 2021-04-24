@@ -1,5 +1,5 @@
 //
-//  MovieListItem.swift
+//  MovieCover.swift
 //  TvApp
 //
 //  Created by Daniel Saidi on 2021-04-24.
@@ -10,20 +10,20 @@ import SwiftUI
 import TvAppKit
 import Kingfisher
 
-struct MovieListItem: View {
+struct MovieCover: View {
     
     let movie: Movie
     
     var body: some View {
-        MovieCover(movie: movie)
-            .frame(height: 350)
-            .cornerRadius(20)
+        KFImage(URL(string: movie.posterUrl))
+            .resizable()
+            .aspectRatio(contentMode: .fit)
     }
 }
 
-struct MovieListItem_Previews: PreviewProvider {
+struct MovieCover_Previews: PreviewProvider {
     
     static var previews: some View {
-        MovieListItem(movie: .preview)
+        MovieCover(movie: .preview)
     }
 }

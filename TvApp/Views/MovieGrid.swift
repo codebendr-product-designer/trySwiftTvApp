@@ -18,9 +18,7 @@ struct MovieGrid: View {
     var body: some View {
         LazyVGrid(columns: columns) {
             ForEach(list.movies) { movie in
-                Button(action: { print("Hello") }) {
-                    MovieListItem(movie: movie)
-                }
+                MovieNavigationButton(movie: movie)
             }
         }
     }
