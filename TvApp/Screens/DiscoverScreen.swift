@@ -24,7 +24,9 @@ struct DiscoverScreen: View {
         ScrollView(.vertical) {
             MovieShelves(lists: lists)
             Button("Next year", action: loadNextYear)
-        }.onAppear(perform: loadFirstYear)
+        }
+        .edgesIgnoringSafeArea(.horizontal)
+        .onAppear(perform: loadFirstYear)
     }
 }
 
