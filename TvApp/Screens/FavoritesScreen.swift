@@ -14,7 +14,9 @@ struct FavoritesScreen: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            MovieGrid(list: .movies(favoriteContext.favorites))
+            MovieGrid(
+                list: .movies(favoriteContext.favorites),
+                paginationAction: {})
         }
     }
 }

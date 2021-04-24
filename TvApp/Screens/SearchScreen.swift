@@ -22,11 +22,13 @@ struct SearchScreen: View {
     @State private var lastQuery = ""
     @State private var list = MovieList.empty
     
+    @State private var page = 1
+    
     var body: some View {
         VStack {
             TextField("Search", text: $text)
             ScrollView {
-                MovieGrid(list: list)
+                MovieGrid(list: list, paginationAction: loadNextPage)
             }
         }.onReceive(text.publisher, perform: { _ in search() })
     }
@@ -37,12 +39,23 @@ private extension SearchScreen {
     func search() {
         guard text != lastQuery else { return }
         lastQuery = text
-        movieService.searchMovies(query: text, page: 1) {
+        movieService.searchMovies(query: text, page: page) {
             switch $0 {
             case .failure: break // Handle
             case .success(let list): self.list = list
             }
         }
+    }
+    
+    func loadNextPage() {
+        page += 1
+        movieService.searchMovies(query: text, page: page) {
+            switch $0 {
+            case .failure: break // Handle
+            case .success(let list): self.list = .movies(self.list.movies + list.movies)
+            }
+        }
+        
     }
 }
 
