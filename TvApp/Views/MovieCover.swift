@@ -17,7 +17,7 @@ struct MovieCover: View {
     var body: some View {
         KFImage(URL(string: movie.posterUrl))
             .resizable()
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
     }
 }
 

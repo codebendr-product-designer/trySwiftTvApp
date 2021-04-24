@@ -13,9 +13,12 @@ struct MovieNavigationButton: View {
     
     let movie: Movie
     
+    @State private var size: CGSize = .zero
+    
     var body: some View {
         NavigationLink(destination: MovieScreen(movie: movie)) {
             MovieListItem(movie: movie)
+                .frame(width: 250, height: 370)
         }.buttonStyle(CardButtonStyle())
     }
 }

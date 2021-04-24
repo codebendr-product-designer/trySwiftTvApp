@@ -11,7 +11,7 @@ import TvAppKit
 
 struct MovieGrid: View {
     
-    let columns = [GridItem(.adaptive(minimum: 450))]
+    let columns = [GridItem(.adaptive(minimum: 300))]
     
     let list: MovieList
     

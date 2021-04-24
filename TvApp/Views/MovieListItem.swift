@@ -16,7 +16,6 @@ struct MovieListItem: View {
     
     var body: some View {
         MovieCover(movie: movie)
-            .frame(height: 350)
             .cornerRadius(20)
     }
 }
