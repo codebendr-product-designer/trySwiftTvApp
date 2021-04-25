@@ -13,8 +13,6 @@ struct MovieNavigationButton: View {
     
     let movie: Movie
     
-    @State private var size: CGSize = .zero
-    
     var body: some View {
         NavigationLink(destination: MovieScreen(movie: movie)) {
             MovieCover(movie: movie)

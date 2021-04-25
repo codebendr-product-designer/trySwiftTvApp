@@ -18,7 +18,7 @@ struct SearchScreen: View {
     
     private let movieService: MovieService
     
-    @State private var text = ""
+    @State private var query = ""
     @State private var lastQuery = ""
     @State private var list = MovieList.empty
     
@@ -26,20 +26,20 @@ struct SearchScreen: View {
     
     var body: some View {
         VStack {
-            TextField("Search", text: $text)
+            TextField("Search", text: $query)
             ScrollView {
                 MovieGrid(list: list, paginationAction: loadNextPage)
             }
-        }.onReceive(text.publisher, perform: { _ in search() })
+        }.onReceive(query.publisher, perform: { _ in search() })
     }
 }
 
 private extension SearchScreen {
     
     func search() {
-        guard text != lastQuery else { return }
-        lastQuery = text
-        movieService.searchMovies(query: text, page: page) {
+        guard query != lastQuery else { return }
+        lastQuery = query
+        movieService.searchMovies(query: query, page: page) {
             switch $0 {
             case .failure: break // Handle
             case .success(let list): self.list = list
@@ -49,7 +49,7 @@ private extension SearchScreen {
     
     func loadNextPage() {
         page += 1
-        movieService.searchMovies(query: text, page: page) {
+        movieService.searchMovies(query: query, page: page) {
             switch $0 {
             case .failure: break // Handle
             case .success(let list): self.list = .movies(self.list.movies + list.movies)

@@ -21,8 +21,8 @@ struct DiscoverScreen: View {
     @State private var lists = [MovieList]()
     
     var body: some View {
-        ScrollView(.vertical) {
-            MovieShelves(lists: lists, paginationAction: loadNextYear)
+        VStack {
+            MovieShelves2(lists: lists, paginationAction: loadNextYear)
             Button("Next year", action: loadNextYear)
         }
         .edgesIgnoringSafeArea(.horizontal)

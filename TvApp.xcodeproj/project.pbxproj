@@ -39,6 +39,8 @@
 		A9B5E60B263472AC003CF7CD /* MoviePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E60A263472AC003CF7CD /* MoviePlayer.swift */; };
 		A9B5E61A26347606003CF7CD /* FavoriteMovieContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E61926347606003CF7CD /* FavoriteMovieContext.swift */; };
 		A9B5E620263476E9003CF7CD /* UserDefaultsPersisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E61F263476E9003CF7CD /* UserDefaultsPersisted.swift */; };
+		A9B5E626263559D2003CF7CD /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9B5E625263559D2003CF7CD /* SwiftUIKit */; };
+		A9B5E62926355B4A003CF7CD /* MovieShelves2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B5E62826355B4A003CF7CD /* MovieShelves2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,7 @@
 		A9B5E60A263472AC003CF7CD /* MoviePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayer.swift; sourceTree = "<group>"; };
 		A9B5E61926347606003CF7CD /* FavoriteMovieContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieContext.swift; sourceTree = "<group>"; };
 		A9B5E61F263476E9003CF7CD /* UserDefaultsPersisted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersisted.swift; sourceTree = "<group>"; };
+		A9B5E62826355B4A003CF7CD /* MovieShelves2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieShelves2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9B5E5F82634557E003CF7CD /* Kingfisher in Frameworks */,
+				A9B5E626263559D2003CF7CD /* SwiftUIKit in Frameworks */,
 				A9B5E4E82632038A003CF7CD /* TvAppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,10 +227,11 @@
 		A9B5E5DF26331F8F003CF7CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */,
-				A9B5E5EF2633EDB1003CF7CD /* MovieGrid.swift */,
 				A9B5E5FA2634594C003CF7CD /* MovieCover.swift */,
+				A9B5E5EF2633EDB1003CF7CD /* MovieGrid.swift */,
 				A9B5E5FE26345994003CF7CD /* MovieNavigationButton.swift */,
+				A9B5E5E026331F9B003CF7CD /* MovieShelves.swift */,
+				A9B5E62826355B4A003CF7CD /* MovieShelves2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			name = TvApp;
 			packageProductDependencies = (
 				A9B5E5F72634557E003CF7CD /* Kingfisher */,
+				A9B5E625263559D2003CF7CD /* SwiftUIKit */,
 			);
 			productName = TvApp;
 			productReference = A9B5E4B1263202B7003CF7CD /* TvApp.app */;
@@ -343,6 +349,7 @@
 			packageReferences = (
 				A9B5E5202632119F003CF7CD /* XCRemoteSwiftPackageReference "SwiftKit" */,
 				A9B5E5F62634557E003CF7CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A9B5E624263559D2003CF7CD /* XCRemoteSwiftPackageReference "SwiftUIKit" */,
 			);
 			productRefGroup = A9B5E4B2263202B7003CF7CD /* Products */;
 			projectDirPath = "";
@@ -380,6 +387,7 @@
 			files = (
 				A9B5E5DD26331CE3003CF7CD /* IoC.swift in Sources */,
 				A9B5E60B263472AC003CF7CD /* MoviePlayer.swift in Sources */,
+				A9B5E62926355B4A003CF7CD /* MovieShelves2.swift in Sources */,
 				A9B5E5FB2634594C003CF7CD /* MovieCover.swift in Sources */,
 				A9B5E5D5263316E9003CF7CD /* MovieScreen.swift in Sources */,
 				A9B5E4B7263202B7003CF7CD /* AppTabs.swift in Sources */,
@@ -694,6 +702,14 @@
 				minimumVersion = 6.3.0;
 			};
 		};
+		A9B5E624263559D2003CF7CD /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielsaidi/SwiftUIKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -706,6 +722,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9B5E5F62634557E003CF7CD /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		A9B5E625263559D2003CF7CD /* SwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9B5E624263559D2003CF7CD /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
+			productName = SwiftUIKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
